@@ -1,0 +1,904 @@
+@import "reset.sass"
+@import "../fonts/fonts.css"
+@import "sittings.sass"
+
+.main-header
+  display: flex
+  flex-direction: column
+  &.reverse
+    flex-direction: column-reverse
+  &-nav
+    background: $main
+    padding: 20px 0
+    ul
+      display: flex
+      justify-content: center
+      li
+        list-style: none
+        margin: 0 20px
+        font-size: 18px
+        line-height: 24px
+        border-bottom: 3px solid transparent
+        transition: .2s linear
+        &:hover
+          border-color: $active
+        &.menu-item-has-child
+          padding-right: 12px
+          position: relative
+          &:hover
+            .sub-menu
+              display: block
+          &:after
+            content: ''
+            width: 9px
+            height: 7px
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            margin-top: 1px
+            background: url(../img/arrow-down.png) no-repeat center center
+      .sub-menu
+        position: absolute
+        display: none
+        top: 100%
+        left: 0
+        padding: 10px 15px
+        border: 1px solid $active
+        background: #ffffff
+        width: 250px
+        li
+          font-size: 15px
+          line-height: 22px
+          padding: 5px 0
+          margin: 0
+          a
+            border-bottom: 1px solid #000
+          &:hover
+            border-color: transparent
+            a
+              color: $active
+              border-color: transparent
+  &-content
+    padding: 10px 0
+    .container
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &-contact
+    align-items: center
+    display: flex
+    justify-content: flex-end
+  &-whatsapp
+    flex-basis: 210px
+    padding-left: 45px
+    position: relative
+    &:before
+      content: ''
+      background: url(../img/whatsapp.png) no-repeat center center
+      width: 29px
+      height: 32px
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+    p
+      font-size: 15px
+      line-height: 20px
+  &-phone
+    padding-left: 75px
+    p
+      font-size: 14px
+      line-height: 18px
+      margin-top: 5px
+    ul
+      position: relative
+      &:before
+        content: ''
+        background: url(../img/phone.png) no-repeat center center
+        width: 19px
+        height: 19px
+        position: absolute
+        left: -25px
+        top: 7px
+      li
+        list-style: none
+        font-size: 21px
+        font-weight: 500
+        line-height: 30px
+        a
+          &:hover
+            color: $active
+
+.main-home
+  padding-top: 50px
+  padding-bottom: 225px
+  .container
+    position: relative
+  &-graphic
+    background: url(../img/main-home-graphic.png) no-repeat center center
+    width: 844px
+    height: 371px
+    background-size: cover
+    position: absolute
+    right: 0
+    bottom: -135px
+  &-wrapper
+    background: url(../img/main-home-bg.jpg) no-repeat center center
+    background-size: cover
+  &-heading
+    h1
+      width: 750px
+      font-size: 60px
+      line-height: 75px
+      opacity: 0.85
+      position: relative
+      margin: 0
+      span
+        position: relative
+        z-index: 2
+      &:before
+        content: ''
+        width: 285px
+        height: 25px
+        background: rgb(229,186,34)
+        background: linear-gradient(90deg, rgba(229,186,34,1) 0%, rgba(211,121,34,1) 100%)
+        position: absolute
+        bottom: 5px
+        left: 4px
+        z-index: 1
+    h2
+      font-size: 32px
+      font-weight: 400
+      position: relative
+      padding-left: 45px
+      margin: 45px 0 0
+      &:before
+        content: ''
+        width: 40px
+        height: 3px
+        background: rgb(229,186,34)
+        background: linear-gradient(90deg, rgba(229,186,34,1) 0%, rgba(211,121,34,1) 100%)
+        left: 0
+        top: 50%
+        margin-top: 2px
+        position: absolute
+  &-advantages
+    display: flex
+    margin-top: 45px
+    &-card
+      flex-basis: 200px
+      p
+        max-width: 140px
+        font-size: 18px
+        line-height: 24px
+        margin: 0
+      img
+        margin: 0 0 20px 20px
+  &-request
+    margin-top: 55px
+
+.category-list
+  margin-top: -60px
+  .container
+    display: flex
+  &-card
+    flex-basis: 33.33%
+    &:first-child
+      background: #e5ba22
+    &:nth-child(2)
+      background: #dc9922
+    &:last-child
+      background: #d47a22
+    &-img
+      width: 100%
+      height: 160px
+      background-size: cover
+    a
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 10px 20px
+      span
+        font-size: 18px
+        line-height: 20px
+        color: #ffffff
+        flex-basis: 235px
+
+.about-company
+  padding: 75px 0
+  .container
+    display: flex
+  &-advantages
+    flex-basis: 400px
+    &-img
+      flex-basis: 112px
+      height: 111px
+    &-card
+      border: 1px solid $main
+      display: flex
+      align-items: center
+      p
+        flex-basis: calc(100% - 112px)
+        padding: 0 15px 0 40px
+        margin: 0
+        font-size: 18px
+        line-height: 24px
+      &:not(:last-child)
+        margin-bottom: 15px
+  &-content
+    flex-basis: calc(100% - 400px)
+    padding-left: 85px
+    h2
+      font-size: 20px
+      line-height: 24px
+      margin: -3px 0 15px
+      text-transform: uppercase
+      padding-bottom: 10px
+      position: relative
+      &:before
+        content: ''
+        width: 100px
+        height: 3px
+        background: rgb(229,186,34)
+        background: linear-gradient(90deg, rgba(229,186,34,1) 0%, rgba(211,121,34,1) 100%)
+        left: 0
+        top: 100%
+        position: absolute
+    p
+      font-size: 17px
+      line-height: 24px
+      margin-bottom: 24px
+
+.advantages
+  background: $main
+  .container
+    position: relative
+    padding: 75px 0
+  &-graphic
+    background: url(../img/adv-graphic.png)
+    width: 258px
+    height: 256px
+    position: absolute
+    margin-top: -128px
+    top: 0
+    right: 75px
+  .heading
+    h2
+      color: #ffffff
+      &:before
+        background: #ffffff
+  &-container
+    margin-top: 55px
+    display: flex
+  &-card
+    flex-basis: 25%
+    padding: 0 10px
+    &-container
+      border: 3px solid #ffffff
+      text-align: center
+      padding: 45px 5px 25px
+    h3
+      color: #ffffff
+      margin: 35px 0 15px
+      font-size: 22px
+      line-height: 24px
+      padding-bottom: 12px
+      position: relative
+      &:after
+        content: ''
+        width: 50px
+        height: 3px
+        background: #ffffff
+        position: absolute
+        top: 100%
+        left: 50%
+        transform: translateX(-50%)
+    p
+      font-size: 18px
+      line-height: 24px
+      color: #ffffff
+
+.tariffs
+  padding: 75px 0
+  &-container
+    display: flex
+    margin-top: 60px
+  &-card
+    flex-basis: 33.33%
+    padding: 0 10px
+    &-container
+      border: 1px solid $main
+      text-align: center
+      padding-bottom: 25px
+    h3
+      font-family: $open, $font, sans-serif
+      font-weight: 700
+      font-size: 20px
+      line-height: 24px
+      background: $main
+      padding: 25px 0
+      margin: 0
+    .price
+      font-size: 36px
+      font-family: $open, $font, sans-serif
+      font-weight: 800
+      margin-top: 35px
+    p
+      margin-top: 30px
+      font-size: 18px
+      line-height: 24px
+      padding: 0 30px
+    ul
+      padding: 0 30px
+      li
+        list-style: none
+        font-size: 18px
+        line-height: 24px
+    .request
+      margin-top: 25px
+      .btn
+        margin: 0 auto
+
+.contact-form
+  background: $main
+  overflow: hidden
+  .container
+    position: relative
+    padding: 75px 0
+  &-graphic
+    background: url(../img/contact-graphic.png) no-repeat center center
+    width: 765px
+    height: 761px
+    position: absolute
+    top: 0
+    right: -280px
+    z-index: 1
+  .heading
+    h2
+      color: #ffffff
+      &:before
+        background: #ffffff
+  &-container
+    width: 1000px
+    margin: 30px auto 0
+    background: #ffffff
+    position: relative
+    padding: 0 0 30px
+    z-index: 2
+    &:before
+      content: ''
+      width: calc(100% - 20px)
+      height: calc(100% - 20px)
+      border: 1px solid $main
+      position: absolute
+      left: 10px
+      top: 10px
+  &-columns
+    display: flex
+    align-items: center
+  &-column
+    flex-basis: 50%
+    position: relative
+    z-index: 2
+    padding: 0 60px
+    p
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 15px
+  &-block
+    margin-top: 40px
+    position: relative
+    input:not([type=radio])
+      width: 100%
+      height: 20px
+      font-size: 16px
+      border: none
+      border-bottom: 1px solid $main
+    .hasDatepicker:hover
+      cursor: pointer
+    &.date-block
+      &:before 
+        content: ''
+        background: url(../img/calendar.png) no-repeat center center
+        width: 17px
+        height: 18px
+        position: absolute
+        right: 10px
+        bottom: 2px
+    .jq-selectbox
+      width: 100%
+      &:hover
+        .jq-selectbox__trigger-arrow
+          border-top-color: $active
+      &.focused
+        .jq-selectbox__select
+          border: none
+          border-bottom: 1px solid $main
+      &__select
+        padding: 0
+        font-family: $font, $open, sans-serif
+        font-size: 18px
+        box-shadow: none
+        background: transparent
+        border: none
+        border-bottom: 1px solid $main
+        border-radius: 0
+      &__trigger
+        border: none
+        &-arrow
+          border-top-color: $main
+  &-row
+    label
+      font-size: 18px
+      line-height: 24px
+      padding-left: 25px
+      position: relative
+      &:before
+        content: ''
+        width: 14px
+        height: 14px
+        border: 1px solid $main
+        position: absolute
+        left: 0
+        top: 5px
+        border-radius: 50%
+      &:after
+        content: ''
+        width: 10px
+        height: 10px
+        background: $main
+        position: absolute
+        left: 3px
+        top: 8px
+        border-radius: 50%
+        display: none
+    input[type=radio]:checked + label:after
+      display: block
+    input[type=radio]
+      display: none
+  &-btn
+    margin-top: 30px
+    position: relative
+    z-index: 2
+    input
+      width: 300px
+      margin: 0 auto
+      border: none
+      &:hover
+        cursor: pointer
+
+.stocks
+  padding: 75px 0
+  &-slider
+    margin-top: 50px
+    padding: 0 80px
+  &-slide
+    padding: 10px
+    &-container
+      background-size: cover!important
+      padding: 30px 0 30px 40px
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+    h3
+      font-size: 36px
+      margin: 0
+    .price
+      padding-left: 80px
+      font-size: 48px
+      font-weight: 500
+      color: #ffffff
+      position: relative
+      margin-top: 35px
+      span
+        position: relative
+        z-index: 2
+      &:before
+        content: ''
+        width: 160px
+        height: 20px
+        background: rgb(229,186,34)
+        background: linear-gradient(90deg, rgba(229,186,34,1) 0%, rgba(211,121,34,1) 100%)
+        left: 82px
+        top: 50%
+        margin-top: 5px
+        position: absolute
+        z-index: 1
+    &-content
+      max-width: 350px
+    p
+      margin-top: 50px
+      font-size: 20px
+      line-height: 24px
+    ul
+      margin-top: 45px
+      li
+        list-style: none
+        font-size: 18px
+        line-height: 24px
+        padding-left: 10px
+        position: relative
+        &:before
+          content: ''
+          width: 5px
+          height: 5px
+          border-radius: 50%
+          background: $main
+          position: absolute
+          top: 11px
+          left: 0
+
+.request-form
+  background: url(../img/contact-form-2.jpg) no-repeat center center
+  padding: 75px 0 20px
+  border-bottom: 2px solid $main
+  &-container
+    width: 775px
+    text-align: center
+  &-heading
+    h2
+      font-size: 34px
+      font-weight: 700
+      line-height: 48px
+      font-family: $open, $font, sans-serif
+      margin: 0
+    p
+      font-size: 22px
+      margin-top: 40px
+  form
+    margin-top: 45px
+    p
+      display: flex
+      justify-content: center
+    span
+      flex-basis: 315px
+      padding: 0 40px
+      text-align: left
+      label
+        display: block
+        font-size: 18px
+      input
+        width: 100%
+        height: 20px
+        margin-top: 15px
+        font-size: 16px
+        border: none
+        border-bottom: 1px solid #000
+        background: transparent
+    input[type=submit]
+      margin: 60px auto 0
+      border: none
+      &:hover
+        cursor: pointer
+  .warning
+    margin-top: 25px
+    font-size: 13px
+    a
+      border-bottom: 1px solid #000
+
+.our-car
+  padding-top: 75px
+  &-slider
+    margin-top: 55px
+    padding: 0 35px
+  &-slide
+    padding: 10px 25px
+    &-container
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+      border: 1px solid $main
+      text-align: center
+      padding-bottom: 20px
+    h3
+      background: $main
+      color: #ffffff
+      font-size: 20px
+      font-family: $open, $font, sans-serif
+      margin: 0
+      padding: 17px 0 20px
+  &-img
+    width: 100%
+    margin-top: 40px
+    img
+      max-height: 120px
+      max-width: 100%
+      margin: 0 auto
+  &-property
+    margin-top: 15px
+    ul
+      li
+        list-style: none
+        font-size: 13px
+        line-height: 18px
+  &-price
+    margin-top: 25px
+    p
+      font-size: 18px
+      line-height: 24px
+      strong
+        font-size: 22px
+        font-family: $open, $font, sans-serif
+        line-height: 24px
+    &-list
+      margin-top: 25px
+      ul
+        li
+          list-style: none
+          font-size: 18px
+          line-height: 24px
+  &-btn
+    margin-top: 25px
+    a
+      margin: 0 auto
+
+.reviews
+  padding: 75px 0
+  &-slider
+    padding: 0 60px
+    margin-top: 50px
+  &-slide
+    padding: 10px 30px 30px
+    &-container
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+      border: 1px solid $main
+      border-radius: 10px
+      padding: 30px 20px
+      position: relative
+      &:after 
+        content: ''
+        background: url(../img/review.png) no-repeat center center
+        width: 52px
+        height: 28px
+        position: absolute
+        top: 100%
+        left: 40px
+    h3
+      font-size: 18px
+      margin: 0
+    p
+      font-size: 18px
+      line-height: 24px
+      margin-top: 20px
+    .author
+      text-align: right
+      font-size: 18px
+      line-height: 24px
+      margin-top: 30px
+
+.main-footer
+  background: #555655
+  padding: 10px 0 20px
+  &-container
+    display: flex
+    justify-content: space-between
+  &-social
+    ul
+      display: flex
+      margin-top: 40px
+      li
+        list-style: none
+        a
+          display: block
+        &:not(:last-child)
+          margin-right: 15px
+  &-nav
+    margin-top: 5px
+    ul
+      display: flex
+      li
+        list-style: none
+        &:not(:last-child)
+          margin-right: 40px
+        a
+          font-size: 18px
+          line-height: 24px
+          color: #ffffff
+          border-bottom: 3px solid transparent
+          &:hover
+            border-color: $active
+  &-phone
+    ul
+      position: relative
+      margin-left: auto
+      &:before
+        content: ''
+        background: url(../img/phone.png) no-repeat center center
+        width: 19px
+        height: 19px
+        position: absolute
+        left: -30px
+        top: 8px
+      li
+        font-size: 21px
+        list-style: none
+        line-height: 30px
+        a
+          color: #ffffff
+          font-weight: 500
+  &-mail
+    margin-top: 25px
+    ul
+      position: relative
+      margin-left: auto
+      &:before
+        content: ''
+        background: url(../img/mail.png) no-repeat center center
+        width: 17px
+        height: 13px
+        position: absolute
+        left: -30px
+        top: 9px
+      li
+        list-style: none
+        a
+          font-size: 18px
+          line-height: 30px
+          color: #ffffff
+  &-copy
+    text-align: center
+    margin-top: 20px
+    p
+      font-size: 15px
+      line-height: 20px
+      color: #ffffff
+
+.breadcrumbs
+  padding: 30px 0 20px
+  ul
+    display: flex
+    li
+      list-style: none
+      font-size: 15px
+      line-height: 24px
+      span
+        margin: 0 5px
+
+.removal
+  &-kind
+    .heading
+      h2
+        margin-bottom: 15px
+    &-content
+      h3
+        font-family: $open, $font, sans-serif
+        font-size: 18px
+        font-weight: 700
+        margin: 35px 0 10px
+      p
+        font-size: 18px
+        line-height: 24px
+      ul
+        li
+          list-style: none
+          font-size: 18px
+          line-height: 24px
+  &-cost
+    margin-top: 60px
+    h3
+      font-family: $open, $font, sans-serif
+      font-size: 20px
+      line-height: 24px
+      font-weight: 700
+      margin: 0
+      text-align: center
+    &-container
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -40px
+    &-card
+      margin-top: 70px
+      flex-basis: 50%
+      padding: 0 40px
+      text-align: center
+      &-content
+        padding: 0 15px
+      &-container
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+        border: 1px solid $main
+        padding-bottom: 30px
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        h4
+          font-family: $open, $font, sans-serif
+          font-size: 20px
+          line-height: 24px
+          font-weight: 700
+          margin: 0
+          background: $main
+          padding: 20px 0
+          margin: 0 -15px
+        .price
+          margin-top: 30px
+          font-size: 30px
+          font-weight: 700
+          strong
+            font-size: 36px
+            font-weight: 800
+        p
+          font-size: 18px
+          line-height: 24px
+          margin-top: 30px
+          storng
+            font-weight: 500
+        ul
+          li
+            font-size: 18px
+            line-height: 24px
+            list-style: none
+      &-btn
+        margin-top: 50px
+        a
+          margin: 0 auto
+  &-gallery
+    padding: 75px 0
+    display: flex
+    flex-wrap: wrap
+    &-card
+      flex-basis: 25%
+      height: 310px
+      background-size: cover!important
+
+.stocks-page
+  padding-bottom: 75px
+  &-card
+    margin-top: 75px
+    border: 1px solid $main
+    img
+      max-width: 100%
+      height: 100%
+  &-request
+    padding: 15px 0
+    a
+      margin: 0 auto
+
+.our-car-page
+  padding-bottom: 75px
+  &-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 0 -20px
+  &-card
+    margin-top: 75px
+    flex-basis: 33.33%
+    padding: 0 20px
+    &-container
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+      border: 1px solid $main
+      text-align: center
+      padding-bottom: 20px
+
+.tariffs-page
+  padding-bottom: 75px
+  &-price
+    padding-top: 75px
+    &-table
+      margin-top: 75px
+      h3
+        font-family: $open, $font, sans-serif
+        font-size: 20px
+        line-height: 24px
+        font-weight: 700
+        margin: 0
+      table
+        margin-top: 30px
+        border-collapse: collapse
+        text-align: left
+        border-left: 1px solid $main
+        border-right: 1px solid $main
+        td, th
+          padding: 20px
+        tr
+          vertical-align: top
+        thead
+          tr
+            background: $main
+            th
+              font-size: 18px
+              line-height: 24px
+              color: #ffffff
+              font-weight: 400
+        tbody
+          tr
+            border-bottom: 1px solid $main
+

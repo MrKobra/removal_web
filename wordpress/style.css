@@ -1,0 +1,18 @@
+/*!
+Theme Name: removal
+Theme URI:
+Author: Mr-Kobra
+Author URI:
+Description:
+Version: 1.0.0
+*/
+
+@import '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css';
+@import 'assets/lib/form-styler/jquery.formstyler.css';
+@import 'assets/lib/form-styler/jquery.formstyler.theme.css';
+@import 'assets/lib/slick/slick.css';
+@import 'assets/lib/slick/slick-theme.css';
+@import 'assets/lib/ui-slider/jquery-ui.css';
+@import 'assets/lib/magnific-popup/magnific-popup.css';
+@import 'assets/css/style.css';
+@import 'assets/css/woocommerce.css';
